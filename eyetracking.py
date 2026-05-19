@@ -1,22 +1,3 @@
-"""
-╔══════════════════════════════════════════════════════════════════════╗
-║            EYE BLINK TAB SWITCHER — eye_blink_monitor.py            ║
-║                                                                      ║
-║  Monitors your eyes via webcam. When both eyes are detected as       ║
-║  closed for N consecutive frames, a keyboard shortcut fires to       ║
-║  switch browser tabs.                                                ║
-║                                                                      ║
-║  SETUP (once):                                                       ║
-║    python3 -m venv .venv                                             ║
-║    .venv/bin/pip install -r requirements.txt                         ║
-║    sudo apt install ydotool   # keyboard on Wayland (see run.sh)     ║
-║                                                                      ║
-║  USAGE:                                                              ║
-║    ./run.sh                                                          ║
-║    # or: .venv/bin/python eyetracking.py                             ║
-║    Press 'q' in the preview window to quit.                          ║
-╚══════════════════════════════════════════════════════════════════════╝
-"""
 
 import cv2
 import mediapipe as mp
