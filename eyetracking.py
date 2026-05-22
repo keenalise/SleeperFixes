@@ -19,12 +19,12 @@ import numpy as np
 #   Typical closed-eye EAR is ~0.10–0.18.
 #   Start with 0.20 and adjust: if the script misses blinks, lower it;
 #   if it triggers on squints, raise it.
-EAR_THRESHOLD = 0.20
+EAR_THRESHOLD = 0.18
 
 # How many consecutive frames both eyes must be below EAR_THRESHOLD
 # before the shortcut fires.  3–5 frames ≈ 100–165 ms at 30 fps.
 # Raise to avoid accidental triggers; lower for faster response.
-CLOSED_FRAME_THRESHOLD = 4
+CLOSED_FRAME_THRESHOLD = 10
 
 # The keyboard shortcut to send when a deliberate blink is detected.
 # Examples:
@@ -42,7 +42,7 @@ CAMERA_INDEX = 0
 
 # After firing the shortcut, ignore further closures for this many seconds.
 # Prevents repeated triggers if you hold your eyes shut.
-DEBOUNCE_SECONDS = 1.5
+DEBOUNCE_SECONDS = 10.0
 
 def ensure_x11_auth():
     """
